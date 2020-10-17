@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "ExtensionStarter",
+  "version": "0.0.1",
+  "background": {
+    "scripts": ["ExtensionStarter.bg.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["ExtensionStarter.cs.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "browser_action": {
+    "default_title": "Parse Recipe"
+  },
+  "permissions": ["activeTab"]
+}
