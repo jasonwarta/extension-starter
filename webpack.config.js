@@ -68,9 +68,6 @@ module.exports = (env) => {
         filename: `${extensionName}.options.html`,
         template: './src/options/index.html',
       }),
-      new CopyWebpackPlugin({
-        patterns: [{ from: './resources/webextensions/manifest.json', to: './manifest.json' }],
-      }),
       new Dotenv({
         path: './.env',
         safe: true,

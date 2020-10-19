@@ -29,7 +29,7 @@ const manifest = {
 // customizations for the edge cases where chrome or firefox requires slightly different syntax
 const browserSpecific = {
   chrome: {},
-  firefox: {},
+  moz: {},
 };
 
 module.exports = (browser) => {
