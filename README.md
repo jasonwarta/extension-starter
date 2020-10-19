@@ -2,15 +2,24 @@
 
 ## Extension Basics
 
+Most browsers support the WebExtension API, or something very similar, including Firefox, Chome, Edge, Opera, Vivalid, and Brave.
+
+## Dependencies
+
+- **webextension-polyfill**  [git](https://github.com/mozilla/webextension-polyfill),[npm](https://www.npmjs.com/package/webextension-polyfill): This package standardizes the browser API to support promises in Chrome and other Chromium browsers.
+
+## Manifest
+
 A browser extension requires a manifest.json file. This includes 3 required fields: `manifest_version`, `name`, and `version`, and a few dozen optional fields. Most of the fields are consistently named between chrome and firefox extensions.
+
+Defined in [resources/webextensions/generateManifest.js](resources/webextensions/generateManifest.js) is a basic manifest which imports the various structures included with this template. This module is called by webpack at build time to generate a manifest depending on the browser. Any browser-specific manifest entries should be listed in the correction section in the file.
 
 Details on the list of fields that can be provided in the manifest are found here.
 
 - [Chrome](https://developer.chrome.com/extensions/manifest)
 - [Firefox](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
 
-
-## Included Structure
+## Included Structures
 
 ### [background](extensions/src/bg/README.md)
 
